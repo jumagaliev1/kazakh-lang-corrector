@@ -11,11 +11,9 @@ def index(request):
         form = UploadFileForm(request.POST, request.FILES)
         print(form.errors)
         if form.is_valid():
-            print("HHHHHHHHHHHH")
             handle_uploaded_file(request.FILES['file'])
             return HttpResponseRedirect("lookup")
     else:
-        print("else condition")
         form = UploadFileForm()
     return render(request,'sym/index.html', {'form': form,})
 
@@ -45,9 +43,9 @@ def lookup(request):
             correct_msg = ""
             txt = msg.split()
             for word in txt:
-                correct_word = lookup_word(word, Verbosity.CLOSEST, MAX_EDIT_DISTANCE)
-                if len(correct_word) > 0:
-                    correct_msg = correct_msg + " " + correct_word[0]
+                correct_word = lookup_word(word, Verbosity.TOP, MAX_EDIT_DISTANCE)
+                if correct_word != None:
+                    correct_msg = correct_msg + " " + correct_word
                 else:
                     correct_msg = correct_msg + " " + word
             data["corrected"].append(correct_msg)
