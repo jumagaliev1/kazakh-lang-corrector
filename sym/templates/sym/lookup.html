@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Dorang landing page.">
+    <meta name="author" content="Devcrud">
+    <title>SymSpell corrector</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="./static/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Dorang main styles -->
+	<link rel="stylesheet" href="./static/css/dorang.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="dark-theme">
+    
+    <!-- page navbar -->
+    <nav class="page-navbar" data-spy="affix" data-offset-top="10">
+        <ul class="nav-navbar container">
+            <li class="nav-item"><a href="/sym" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Explore</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><img src="static/imgs/placeholder.svg" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, weber Landing page"></a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Journal</a></li>
+            <li class="nav-item search">
+                <a href="javascript:void(0)" class="nav-link search-toggle"><i class="ti-search"></i> Search</a>
+                <div class="search-wrapper">
+                    <form>
+                        <input type="search" class="form-control" name="" placeholder="hit enter to search">
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </nav><!-- end of page navbar -->
+
+    <div class="theme-selector">
+        <a href="javascript:void(0)" class="spinner">
+            <i class="ti-paint-bucket"></i>
+        </a>
+        <div class="body">
+            <a href="javascript:void(0)" class="light"></a>
+            <a href="javascript:void(0)" class="dark"></a>
+        </div>
+    </div>  
+
+   
+   
+    
+    
+    <div style="padding-top: 100px;">
+        <table style="color: white;">
+            <tr>
+              <th>Message</th>
+              <th>language</th>
+              <th>corrected</th>
+              <th>correct</th>
+            </tr>
+            {% for msg, lang, crr, crrtd in data %}
+            <tr>
+              <td>{{msg}}</td>
+              <td>{{lang}}</td>
+              <td>{{ crr }}</td>
+              <td>{{ crrtd }}</td>
+            </tr>
+            {% endfor %}
+        </table> 
+    </div>
+    
+
+
+
+    <!-- core  -->
+    <script src="static/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="static/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="static/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Dorang js -->
+    <script src="static/js/dorang.js"></script>
+
+</body>
+</html>
