@@ -10,13 +10,12 @@
     <!-- font icons -->
     <link rel="stylesheet" href="static/vendors/themify-icons/css/themify-icons.css">
 
-    <!-- Bootstrap + Dorang main styles -->
 	<link rel="stylesheet" href="static/css/dorang.css">
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" class="dark-theme">
     
-    <!-- page navbar -->
+   
     <nav class="page-navbar" data-spy="affix" data-offset-top="10">
         <ul class="nav-navbar container">
             <li class="nav-item"><a href="/sym" class="nav-link">Home</a></li>
@@ -32,7 +31,7 @@
                 </div>
             </li>
         </ul>
-    </nav><!-- end of page navbar -->
+    </nav>
 
     <div class="theme-selector">
         <a href="javascript:void(0)" class="spinner">
@@ -44,17 +43,13 @@
         </div>
     </div>  
 
-    <!-- page header -->
     <header class="header">
         <div class="overlay"></div>
         <div class="header-content">
             <h1 class="header-title">Simple Kazakh language corrector</h1>
             <p class="header-subtitle">Export any kazakh speaken telegram chat</p>
 
-            <!-- <button class="btn btn-theme-color modal-toggle">Upload JSON</button> -->
-            
             <form action="/sym" method="POST" enctype="multipart/form-data">
-                <!-- <input type="hidden" name="csrfmiddlewaretoken" value="ahrE0SxHiOEKPnsmQXLKPesdouFipwe0vhrE93Qwg5YRv75CaDHjhAN9kEfEo4Nw"> -->
                 {% csrf_token %}
                 <p>
                     <label for="id_file">File:</label>
@@ -64,7 +59,7 @@
             </form>
         </div>
         
-    </header><!-- end of page header -->
+    </header>
    
 
     
@@ -73,7 +68,7 @@
 
             <!-- footer -->
             <footer class="footer">
-                <p class="infos">&copy; <script>document.write(new Date().getFullYear())</script>, Made with <i class="ti-heart text-danger"></i> by <a href="http://www.devcrud.com">Alibi</a></p>       
+                <p class="infos">&copy; <script>document.write(new Date().getFullYear())</script>, Made with <i class="ti-heart text-danger"></i> by <a href="http://www.devcrud.com">Merei</a></p>       
                 <span>|</span>  
                 <div class="links">
                     <a href="#">About</a>
